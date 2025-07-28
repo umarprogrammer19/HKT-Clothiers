@@ -1176,7 +1176,55 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     -->
+            <script>
+               document.addEventListener("DOMContentLoaded", function () {
+    // Capture all query parameters from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const queryParams = {};
 
+    // Iterate through all query parameters and store them in an object
+    urlParams.forEach((value, key) => {
+        queryParams[key] = value;
+    });
+
+    // Find the form element
+    const form = document.getElementById("contactForm");
+
+    if (form) {
+        // Dynamically add hidden inputs for each query parameter
+        Object.keys(queryParams).forEach(key => {
+            const hiddenInput = document.createElement("input");
+            hiddenInput.type = "hidden";
+            hiddenInput.name = key;  // Set the name to the query parameter key
+            hiddenInput.value = queryParams[key];  // Set the value to the query parameter value
+            form.appendChild(hiddenInput);
+        });
+
+        // Add event listener to handle form submission
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Prepare form data including all query parameters
+            const formData = new FormData(form);
+
+            // Send form data to the backend via fetch
+            fetch(form.action, {
+                method: "POST",
+                body: formData,
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log("Form submitted successfully:", data);
+                // Handle success (e.g., redirect or show success message)
+            })
+            .catch(error => {
+                console.error("Error submitting form:", error);
+            });
+        });
+    }
+});
+
+            </script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
