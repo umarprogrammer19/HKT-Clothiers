@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>HKT Custom Suits Tailored Luxury Crafted Just for You </title>
+   <link rel="icon" type="image/x-icon" href="assets/images/favicon-hkt.png">
+   <meta name="description"
+      content="Step into luxury with our custom suits starting at $1895. Every suit is meticulously crafted to your measurements using premium fabrics, ensuring you look and feel your best. Discover the difference a custom suit can make for your confidence and style. ">
+   <meta name="keywords" content="Clothing">
+   <meta name="author" content="Xntric">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+   <script>
+      // Run only if the user is on the main page (root or index.html)
+      const currentPath = window.location.pathname;
+      const isHomePage = currentPath === "/" || currentPath === "/index.html";
+
+      if (isHomePage) {
+         fetch("https://ipapi.co/json/")
+            .then(res => res.json())
+            .then(data => {
+               const isGeorgiaUS = data.country === "US" && data.region_code === "GA";
+               const isDubaiUAE = data.country === "AE" && data.city === "Dubai";
+
+               if (!isGeorgiaUS && !isDubaiUAE) {
+                  window.location.href = "/blocked.html";
+               }
+            })
+            .catch(() => {
+               // Redirect to blocked page on error
+               window.location.href = "/blocked.html";
+            });
+      }
+   </script>
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <link href="assets/css/fonts.css" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
+   <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
+   <link href="assets/css/custom.css" rel="stylesheet">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <link href="assets/css/hkt.css" rel="stylesheet">
+   <link href="assets/css/responsive.css" rel="stylesheet">
+   <style>
+      .section-heading {
+         font-family: 'Times New Roman', serif;
+         font-size: 32px;
+         color: #A42126;
+         margin-bottom: 20px;
+         position: unset;
+      }
+
+      .map-container {
+         width: 100%;
+         height: 430px;
+         border-radius: 10px;
+         background-image: url('./assets/images/map.png');
+         /* Replace with the correct path to your image */
+         background-size: contain;
+         background-position: center;
+      }
+
+      .contact-details {
+         font-family: 'Arial', sans-serif;
+         color: #333;
+      }
+
+      .contact-details p {
+         margin-bottom: 0;
+         line-height: 1.2em;
+      }
+
+      .contact-details h5 {
+         font-weight: bold;
+         font-size: 18px;
+         margin-top: 15px;
+         color: #A42126;
+      }
+
+      .contact-details a {
+         color: #333;
+         text-decoration: none;
+      }
+
+      .contact-details a:hover {
+         color: #A42126;
+      }
+
+      .icon {
+         width: 35px;
+         height: 35px;
+         margin-right: 20px;
+         margin-top: 15px;
+      }
+
+      .contact-item {
+         display: flex;
+         align-items: start;
+         margin-bottom: 10px;
+      }
+
+      .slick-prev,
+      .slick-next {
+         z-index: 1;
+         background-color: #A42126;
+         color: white;
+         border-radius: 50%;
+         padding: 10px;
+         transition: background-color 0.3s ease;
+      }
+
+      .slick-prev {
+         left: -40px;
+      }
+
+      .slick-next {
+         right: -40px;
+      }
+
+      .slick-prev:hover,
+      .slick-next:hover {
+         background-color: #c8222b;
+      }
+
+      .slick-dots {
+         bottom: -30px;
+      }
+
+      .slick-dots li button:before {
+         font-size: 10px;
+         color: #A42126;
+      }
+
+      .slick-dots li.slick-active button:before {
+         color: #A42126;
+      }
+
+      .slick-slide {
+         padding: 15px;
+      }
+
+      /* Refined spacing and alignment for the service card images */
+      .service-card {
+         position: relative;
+         overflow: hidden;
+         width: 100%;
+         height: 100%;
+         margin-bottom: 20px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .service-image img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+
+      .service-content-bottom {
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         text-align: center;
+         /* Dark background for text visibility */
+         color: white;
+         padding: 35px;
+         border-bottom-left-radius: 10px;
+         border-bottom-right-radius: 10px;
+      }
+
+      .service-overlay {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: rgba(0, 0, 0, 0.5);
+         opacity: 0;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         transition: opacity 0.3s ease-in-out;
+      }
+
+      .service-card:hover .service-overlay {
+         opacity: 1;
+      }
+
+      .service-content {
+         text-align: center;
+         color: white;
+      }
+
+      .service-title {
+         font-size: 24px;
+         font-weight: bold;
+         line-height: 1.2;
+         margin-bottom: 10px;
+      }
+
+      .service-text {
+         font-size: 14px;
+         line-height: 1.5;
+         margin-bottom: 0;
+      }
+
+      /* Container and alignment tweaks */
+      .services-carousel {
+         display: flex;
+         justify-content: space-between;
+         gap: 20px;
+         /* Adjust the gap between cards */
+      }
+
+      .services-carousel .slick-slide {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 0 10px;
+      }
+
+      /* Adding some refinement to the "Perfect Fit" title */
+      .section-heading span {
+         color: #c8222b;
+         font-weight: bold;
+      }
+
+      /* Refine the margin and padding of the text */
+      .pt-4,
+      .pb-4 {
+         padding-top: 20px;
+         padding-bottom: 20px;
+      }
+
+      .service-card h3 {
+         font-size: 26px;
+         font-weight: 700;
+         margin-top: 10px;
+         text-transform: capitalize;
+      }
+
+      p.cs {
+         color: #505050;
+      }
+
+      .review-title {
+         line-height: 1em;
+      }
+
+      .rev-dp {
+         font-size: 14px;
+         color: #505050;
+         padding: 3px 0px 3px;
+         margin: 0;
+         display: block;
+         line-height: 1em;
+      }
+
+      .rev-ind {
+         padding: 3px 0px 3px;
+         line-height: 1em;
+         font-size: 18px;
+         padding: 0;
+         margin: 0;
+         display: block;
+      }
+
+      .review-box .review-content p.review-text {
+         min-height: 290px;
+      }
+
+      /***/
+      #calendly-popup {
+         display: none;
+         /* Hidden by default */
+         position: fixed;
+         /* Stay in place */
+         z-index: 99999;
+         /* Sit on top */
+         left: 0;
+         top: 0;
+         width: 100%;
+         /* Full width */
+         height: 100%;
+         /* Full height */
+         overflow: auto;
+         /* Enable scroll if needed */
+         background-color: rgba(0, 0, 0, 0.6);
+         /* Black w/ opacity */
+         display: flex;
+         /* Use flexbox for centering */
+         justify-content: center;
+         /* Center horizontally */
+         align-items: center;
+         /* Center vertically */
+      }
+
+      .popup-content {
+         background-color: #fefefe;
+         margin: auto;
+         /* Removed to use flexbox centering */
+         padding: 40px 15px;
+         border: 1px solid #888;
+         width: 99%;
+         /* Adjust as needed */
+         max-width: 70%;
+         /* Max width for larger screens */
+         height: 80%;
+         /* Adjust as needed */
+         max-height: 800px;
+         /* Max height for larger screens */
+         position: relative;
+         border-radius: 8px;
+         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+         display: flex;
+         /* For iframe to take full height */
+         flex-direction: column;
+         /* Arrange items vertically */
+      }
+
+      .popup-content iframe {
+         flex-grow: 1;
+         /* Allow iframe to take available space */
+      }
+
+      .close-button {
+         color: #aaa;
+         float: right;
+         font-size: 28px;
+         font-weight: bold;
+         position: absolute;
+         top: 10px;
+         right: 20px;
+         cursor: pointer;
+         z-index: 1001;
+         /* Ensure close button is above iframe */
+      }
+
+      .close-button:hover,
+      .close-button:focus {
+         color: black;
+         text-decoration: none;
+         cursor: pointer;
+      }
+   </style>
+   <!-- Google Tag Manager -->
+   <script>(function (w, d, s, l, i) {
+         w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+
+               new Date().getTime(), event: 'gtm.js'
+         }); var f = d.getElementsByTagName(s)[0],
+
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+
+               'https://www.googletagmanager.com/gtm.js?id=GTM-KFTMB3KK'; f.parentNode.insertBefore(j, f);
+
+      })(window, document, 'script', 'dataLayer', 'GTM-KFTMB3KK');</script>
+   <!-- End Google Tag Manager -->
+   <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+         c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+         t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+         y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "rydvloq74w");
+   </script>
+   <script type="application/ld+json">
+         {
+           "@context": "https://schema.org",
+           "@type": "Product",  
+           "name": "HKT Custom Suits",
+           "image": "https://example.com/assets/images/re-star-img.png",
+           "description": "High-quality custom suits for special occasions, business, and weddings.",
+           "brand": {
+             "@type": "Organization",
+             "name": "HKT"
+           },
+           "aggregateRating": {
+             "@type": "AggregateRating",
+             "ratingValue": "5",
+             "reviewCount": "7"
+           },
+           "review": [
+             {
+               "@type": "Review",
+               "author": {
+                 "@type": "Person",
+                 "name": "Brian Anthony"
+               },
+               "reviewRating": {
+                 "@type": "Rating",
+                 "ratingValue": "5"
+               },
+               "reviewBody": "If you're wanting to build a quality relationship that is invested in your conduct and appearance, you can find none better than HKT."
+             },
+             {
+               "@type": "Review",
+               "author": {
+                 "@type": "Person",
+                 "name": "Jeff Whatley"
+               },
+               "reviewRating": {
+                 "@type": "Rating",
+                 "ratingValue": "5"
+               },
+               "reviewBody": "They made me a beautiful 3-piece suit for my retirement. I absolutely love it!"
+             },
+             {
+               "@type": "Review",
+               "author": {
+                 "@type": "Person",
+                 "name": "Will Davis"
+               },
+               "reviewRating": {
+                 "@type": "Rating",
+                 "ratingValue": "5"
+               },
+               "reviewBody": "I had the best experience getting ready for my wedding. HKT made everything very easy."
+             },
+             {
+               "@type": "Review",
+               "author": {
+                 "@type": "Person",
+                 "name": "Keith Allgood"
+               },
+               "reviewRating": {
+                 "@type": "Rating",
+                 "ratingValue": "5"
+               },
+               "reviewBody": "Thank you for my sport evening coat. This has been a fantastic experience!"
+             },
+             {
+               "@type": "Review",
+               "author": {
+                 "@type": "Person",
+                 "name": "Bayne Grubb"
+               },
+               "reviewRating": {
+                 "@type": "Rating",
+                 "ratingValue": "5"
+               },
+               "reviewBody": "Had a suit and tux made here. Staff was great and the fit was perfect."
+             },
+             {
+               "@type": "Review",
+               "author": {
+                 "@type": "Person",
+                 "name": "Hazel Wakeman"
+               },
+               "reviewRating": {
+                 "@type": "Rating",
+                 "ratingValue": "5"
+               },
+               "reviewBody": "I acquired a beautiful custom suit perfectly fitted after one try. Amazing team!"
+             },
+             {
+               "@type": "Review",
+               "author": {
+                 "@type": "Person",
+                 "name": "Blake Patrick"
+               },
+               "reviewRating": {
+                 "@type": "Rating",
+                 "ratingValue": "5"
+               },
+               "reviewBody": "HKT are masters of their craft. Highly recommend for custom suits!"
+             }
+           ]
+         }
+      </script>
+
+   <script>!function () { var reb2b = window.reb2b = window.reb2b || []; if (reb2b.invoked) return; reb2b.invoked = true; reb2b.methods = ["identify", "collect"]; reb2b.factory = function (method) { return function () { var args = Array.prototype.slice.call(arguments); args.unshift(method); reb2b.push(args); return reb2b; }; }; for (var i = 0; i < reb2b.methods.length; i++) { var key = reb2b.methods[i]; reb2b[key] = reb2b.factory(key); } reb2b.load = function (key) { var script = document.createElement("script"); script.type = "text/javascript"; script.async = true; script.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/GNLKQHP1DQ6Q.js.gz"; var first = document.getElementsByTagName("script")[0]; first.parentNode.insertBefore(script, first); }; reb2b.SNIPPET_VERSION = "1.0.1"; reb2b.load("GNLKQHP1DQ6Q"); }();</script>
+
+</head>
+
+<body>
+   <!-- Google Tag Manager (noscript) -->
+   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFTMB3KK" height="0" width="0"
+         style="display:none;visibility:hidden"></iframe></noscript>
+   <!-- End Google Tag Manager (noscript) -->
+   <header class="header desktop">
+      <div class="container">
+         <div class="row d-md-flex align-items-center justify-content-between">
+            <div class="col-4 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+               <a class="site-logo" href="/"><img src="assets/images/hkt-logo.png" alt="Logo" /></a>
+            </div>
+            <div class="col-8 col-md-5 col-lg-5 col-xl-5 col-xxl-5 text-end">
+               <a href="#cform" class="btn btn-cta">Schedule an appointment</a>
+            </div>
+         </div>
+      </div>
+   </header>
+   <div class="fx-btns">
+      <ul>
+         <li>
+            <a href="tel:+1 770-458-8682"><img src="assets/images/ct-call.png" /></a>
+         </li>
+         <li>
+            <a href="" id="mbutton"><img src="assets/images/ct-schedue.png" /></a>
+      </ul>
+   </div>
+   <!-- Modal -->
+   <div id="calendly-popup" style="display: none;">
+      <div class="popup-content">
+         <span class="close-button">&times;</span>
+         <iframe src="https://calendly.com/hktclothiers/custom-consultation" width="100%" height="900px frameborder=" 0"
+            title="Select a Date &amp; Time - Calendly""></iframe>
+         </div>
+      </div>
+      <!--End Modal -->
+
+      <!-- Script -->
+      <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const mbutton = document.getElementById("mbutton");
+    const calendlyPopup = document.getElementById("calendly-popup");
+    const closeButton = document.querySelector("#calendly-popup .close-button");
+
+    // Show the popup when button is clicked
+    if (mbutton && calendlyPopup) {
+        mbutton.addEventListener("click", function (event) {
+            event.preventDefault();
+            calendlyPopup.style.display = "flex";
+        });
+    }
+
+    // Close the popup when the close button is clicked
+    if (closeButton && calendlyPopup) {
+        closeButton.addEventListener("click", function () {
+            calendlyPopup.style.display = "none";
+        });
+    }
+
+    // Close the popup when clicking outside the popup content (on the backdrop)
+    if (calendlyPopup) {
+        calendlyPopup.addEventListener("click", function (event) {
+            if (event.target === calendlyPopup) {
+                calendlyPopup.style.display = "none";
+            }
+        });
+    }
+});
+</script>
+
+            <!--- Hero Section -->
+            <section class="hero-sec d-none">
+               <div class="container">
+                  <div class="row">
+                  </div>
+               </div>
+            </section>
+            <!--- Hero Section -->
+            <section class="hero-sec position-relative overflow-hidden" style="height: 100vh; ">
+               <!-- Video Background -->
+               <video autoplay muted loop playsinline
+                  class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover z-n1">
+                  <source src="assets/images/hkt-lp-1-hero-vid1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+               </video>
+               <!-- Overlay (optional for better text visibility) -->
+               <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 z-0"></div>
+               <div class="container position-relative z-1 text-white d-flex align-items-center h-100">
+                  <div class="row w-100">
+                     <div class="col-12 col-md-12 col-lg-12 mxw-75">
+                        <div class="">
+                           <h1>
+                              PERFECT FIT FOR <br /><span>PERFECT MOMENTS</span>
+                           </h1>
+                           <p>Where timeless craftsmanship meets your unique style</p>
+                           <div class="hero-btn">
+                              <a href="#cform" class="btn btn-cta">Schedule an appointment</a>
+                              <!-- <a href="">Learn More</a> -->
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- At HKT Clothiers -->
+            <section class="at-hkt-clt" data-aos="fade-up">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12 col-md-6">
+                        <img src="assets/images/at-hkt-clothier2.png" alt="" class="n-dsk" />
+                     </div>
+                     <div class="col-12 col-md-6 pd-l-40 pd-r-40">
+                        <h2 class="text-left">
+                           Excellence is our promise<br /><span>quality defines us</span>
+                        </h2>
+                        <p class="mt-3 cs">
+                           With over 50 years of family expertise, we have been perfecting the art of custom
+                           craftsmanship.
+                           We've proudly dressed grooms, CEOs, business professionals, and thousands of discerning
+                           gentlemen who demand the very best.
+                        </p>
+                        </p>
+                        <p class="mt-2 cs">
+                           <strong>Award-Winning Craftsmanship</strong><br />
+                           Expert tailoring recognized by industry professionals and trusted by loyal clients in
+                           Atlanta.
+                        </p>
+                        <p class="mt-2 cs">
+                           <strong>Premium, Handpicked Fabrics</strong><br />
+                           Luxurious materials carefully selected from the world's most prestigious mills and renowned
+                           textile houses.
+                        </p>
+                        <p class="mt-2 cs">
+                           <strong>Perfect Fit Promise</strong><br />
+                           Our commitment to precision ensures complete satisfaction with every custom garment we
+                           create.
+                        </p>
+                        <img src="assets/images/neil-abt-mob.png" alt="Neil Abt" class="n-mob" />
+                        <div class="row pt-5 awds">
+                           <div class="col-4 col-md-4 text-center">
+                              <div class="awd-icon">
+                                 <img src="assets/images/cbc-icon.png" />
+                              </div>
+                              <h4>Top 5 Atlanta Tailors</h4>
+                              <p>CBS News Channel</p>
+                           </div>
+                           <div class="col-4 col-md-4 text-center">
+                              <div class="awd-icon tw">
+                                 <img src="assets/images/atlantan-icon.png" />
+                              </div>
+                              <h4>Best of Atlanta</h4>
+                              <p>The Atlantan Magazine</p>
+                           </div>
+                           <div class="col-4 col-md-4 text-center">
+                              <div class="awd-icon th"> <img src="assets/images/jezebel-icon.png" />
+                              </div>
+                              <h4>Best Black Tie for Him</h4>
+                              <p>Jezebel Magazine</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- Tailoring Service -->
+            <section class="tailoring-services">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12 text-center">
+                        <h2 class="">
+                           LET'S TAILOR YOUR<br /> <span>PERFECT STYLE TOGETHER</span>
+                        </h2>
+                        <p class="pt-4 pb-4 cs mxw-75">
+                           Each fit begins with a vision and a promise to make someone feel their absolute best. Here’s
+                           a
+                           glimpse
+                           of the styles and moments that inspire the kind of work we strive to create, brought together
+                           with care
+                           and intention
+                        </p>
+                     </div>
+                  </div>
+                  <!-- Services Grid -->
+                  <div class="row services-grid">
+                     <!-- Service 1: Suits -->
+                     <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="service-card">
+                           <div class="service-image">
+                              <img src="assets/images/curate-1a.png" alt="Elegant black suit" class="img-fluid">
+                              <div class="service-content-bottom">
+                                 <h3 class="service-title">Tuxedoes</h3>
+                                 <p class="service-text">For your boldest, most memorable moments—ideal for black-tie
+                                    events, milestone celebrations, and unforgettable weddings.
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Service 2: Tuxedos -->
+                     <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="service-card">
+                           <div class="service-image">
+                              <img src="assets/images/curate-2a.png" alt="Formal tuxedo with bow tie" class="img-fluid">
+                              <div class="service-content-bottom">
+                                 <h3 class="service-title">Suits</h3>
+                                 <p class="service-text">Tailored to fit, designed to impress, perfect for work,
+                                    weddings, or refined everyday style.
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Service 3: Jackets -->
+                     <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="service-card">
+                           <div class="service-image">
+                              <img src="assets/images/curate-3a.png" alt="Casual blazer jacket" class="img-fluid">
+                              <div class="service-content-bottom">
+                                 <h3 class="service-title">Sport Jackets</h3>
+                                 <p class="service-text">Smart, stylish layers for any occasion, from casual outings to
+                                    formal affairs.
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Service 4: Jackets -->
+                     <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="service-card">
+                           <div class="service-image">
+                              <img src="assets/images/curate-4a.png" alt="Casual blazer jacket" class="img-fluid">
+                              <div class="service-content-bottom">
+                                 <h3 class="service-title">Shirts</h3>
+                                 <p class="service-text">Tailored fit that speaks of distinction, meant for standout
+                                    dressing, graceful ease, and modern sophistication.
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Service 5: Jackets -->
+                     <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="service-card">
+                           <div class="service-image">
+                              <img src="assets/images/curate-5a.png" alt="Casual blazer jacket" class="img-fluid">
+                              <div class="service-content-bottom">
+                                 <h3 class="service-title">Vests</h3>
+                                 <p class="service-text">A sharp fit built to define presence, crafted for evening
+                                    refinement, elevated style, and confident expression
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Service 6: Jackets -->
+                     <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="service-card">
+                           <div class="service-image">
+                              <img src="assets/images/curate-6a.png" alt="Casual blazer jacket" class="img-fluid">
+                              <div class="service-content-bottom">
+                                 <h3 class="service-title">Outerwear</h3>
+                                 <p class="service-text">Layers with distinct character, made to complement transitions,
+                                    polished settings, and everyday elegance.
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- slider scale nav -->
+                  <div class="custom-nav">
+                     <span class="slide-number current-slide1">01</span>
+                     <div class="progress-bar">
+                        <div class="progress" style="width: 0%;"></div>
+                     </div>
+                     <span class="slide-number total-slides1">06</span>
+                  </div>
+                  <div class="row mt-5">
+                     <div class="col-12 text-center">
+                        <a href="#cform" class="btn btn-cta dark">Schedule an appointment</a>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- reviews section -->
+            <section class="review-sec" data-aos="fade-up">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mxw-75">
+                        <h2 class=" mx-auto">
+                           Trusted by Generations <br /><span>Loved by Clients</span>
+                        </h2>
+                        <p class="pt-4 pb-4 cs">
+                           Every suit is crafted with precision and care, we understand that exceptional<br /> tailoring
+                           begins with listening to your story
+                        </p>
+                     </div>
+                  </div>
+                  <!-- review slider -->
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="reviews-carousel">
+                           <div class="review-box">
+                              <div class="review-content">
+                                 <img src="assets/images/re-star-img.png" alt="" />
+                                 <p class="review-text">
+                                    If you're wanting to build a quality relationship that is invested in your conduct
+                                    and appearance, you can find none better than HKT.
+                                 </p>
+                                 <p class="review-title">Brian Anthony
+                                    <span class="cs rev-dp">Custom Business Attire</span>
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="review-box">
+                              <div class="review-content">
+                                 <img src="assets/images/re-star-img.png" alt="" />
+                                 <p class="review-text">
+                                    They made me a beautiful 3-piece suit for my retirement. I absolutely love it! The
+                                    whole experience was wonderful from start to finish. I highly recommend these
+                                    gentlemen. Treat yourself today!
+                                 </p>
+                                 <p class="review-title">Jeff Whatley
+                                    <span class="cs rev-dp">Custom Retirement Suit</span>
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="review-box">
+                              <div class="review-content">
+                                 <img src="assets/images/re-star-img.png" alt="" />
+                                 <p class="review-text">
+                                    I had the best experience getting ready for my wedding. The guys at HKT made me feel
+                                    very much like I was in great hands, they walk through the entire process of suit
+                                    creation. Picked out my fabric, color and fitment everything was extremely precise.
+                                    Definitely would recommend this custom suit shop to anyone looking for a suit,
+                                    tuxedo or just a casual pair of slacks
+                                 </p>
+                                 <p class="review-title">Will Davis
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="review-box">
+                              <div class="review-content">
+                                 <img src="assets/images/re-star-img.png" alt="" />
+                                 <p class="review-text">
+                                    Thank you for my sport evening coat. I have enjoyed this entire experience. Your
+                                    staff is very personable, professional, and focused. From fabric selection to
+                                    pockets and buttons, and fitting with pictures - truly a well-done piece. Thank you
+                                    again for this addition to my wardrobe. I will enjoy this for many years.
+                                 </p>
+                                 <p class="review-title">Keith Allgood
+                                    <span class="cs rev-dp">Special Occasion Sports Jacket</span>
+                                 </p>
+                              </div>
+                           </div>
+                           <!----->
+                           <div class="review-box">
+                              <div class="review-content">
+                                 <img src="assets/images/re-star-img.png" alt="" />
+                                 <p class="review-text">
+                                    I've had a suit and tuxedo made here and it was a great experience. The staff is
+                                    friendly and able to guide you through the process, also very accommodating with
+                                    requests and fit alterations once the garment is made.
+                                 </p>
+                                 <p class="review-title">Bayne Grubb
+                                    <span class="cs rev-dp">Special Occasion Tuxedo</span>
+                                 </p>
+                              </div>
+                           </div>
+                           <!----->
+                           <div class="review-box">
+                              <div class="review-content">
+                                 <img src="assets/images/re-star-img.png" alt="" />
+                                 <p class="review-text">
+                                    I acquired one of the most beautiful custom suits here and had it perfectly fitted
+                                    to my form after just one fitting. The staff are all incredibly kind and
+                                    knowledgeable, the available fabrics are exquisite, and the master tailor is truly a
+                                    master of his craft. I would go back for anything ranging from a small alteration
+                                    for a beloved garment to a suit I wish to be married in. Wonderful place, fully
+                                    earned all five stars.
+                                 </p>
+                                 <p class="review-title">Hazel Wakeman
+                                 </p>
+                              </div>
+                           </div>
+                           <!----->
+                           <div class="review-box">
+                              <div class="review-content">
+                                 <img src="assets/images/re-star-img.png" alt="" />
+                                 <p class="review-text">
+                                    The team at HKT are masters of their craft. Be prepared to spend some money (I'm
+                                    just a Paramedic, so take it from me, it's not anything overly crazy), but rest
+                                    assured, it is worth EVERY penny! I came here for a suit for my wedding and was
+                                    walked through every step of the process without feeling pressured to spend more.
+                                    Sanjay was very informative and the tailor's attention to detail was impeccable.
+                                    I've never had clothing that fit me this well. Also, the turnaround time was very
+                                    fast. I'd recommend them to anyone looking for custom clothing of any kind!
+                                 </p>
+                                 <p class="review-title">Blake Patrick
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- slider scale nav -->
+                        <div class="custom-nav">
+                           <span class="slide-number current-slide">01</span>
+                           <div class="progress-bar">
+                              <div class="progress" style="width: 0%;"></div>
+                           </div>
+                           <span class="slide-number total-slides">04</span>
+                        </div>
+                        <!-- ended -->
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- From the first fitting to final -->
+            <section class="first-fitting" data-aos="fade-up">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 text-center mxw-75">
+                        <h2 class="text-light">
+                           Every Stitch Crafted <br /> to
+                           <span class="text-"> Perfection</span>
+                        </h2>
+                        <p class="pt-4 pb-4 text-light">
+                           From first fitting to final stitch, we’re here to craft pieces that speak to your
+                           personality, your lifestyle, and your story.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="container-fluid text-light">
+                  <div class="row">
+                     <div class="post-carousel">
+                        <div class="slide-box">
+                           <div class="slide-content">
+                              <div><img src="assets/images/fiting-1.png" /></div>
+                              <div class="cft-content">
+                                 <div>
+                                    <h2>01</h2>
+                                 </div>
+                                 <div class="side-text">
+                                    <h3>Style Preferences</h3>
+                                    <p>
+                                       This is where vision meets possibility. We discuss your style preferences, your
+                                       occasion and present you with hand-selected luxury fabrics to define the tone of
+                                       your outfit. Then with your measurements taken a unique pattern is crafted for
+                                       you.
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slide-box">
+                           <div class="slide-content">
+                              <div>
+                                 <video autoplay muted loop playsinline class="">
+                                    <source src="assets/images/hkt-shop-2.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                 </video>
+                              </div>
+                              <div class="cft-content">
+                                 <div>
+                                    <h2>02</h2>
+                                 </div>
+                                 <div class="side-text">
+                                    <h3>Perfecting Your Fit</h3>
+                                    <p>
+                                       As your garment nears completion, we tailor it to your form. We schedule one or
+                                       more
+                                       fittings to ensure precision, making careful adjustments at each stage. The
+                                       final
+                                       result delivers expert craftsmanship, perfect proportions, and a custom fit
+                                       designed
+                                       for you.
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="slide-box">
+                           <div class="slide-content">
+                              <div>
+                                 <video autoplay muted loop playsinline class="">
+                                    <source src="assets/images/hkt-shop-3.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                 </video>
+                              </div>
+                              <div class="cft-content">
+                                 <div>
+                                    <h2>03</h2>
+                                 </div>
+                                 <div class="side-text">
+                                    <h3>Tailored for moments</h3>
+                                    <p>
+                                       Great style isn’t just seen, it’s felt. Whether you're stepping into a
+                                       boardroom,
+                                       walking down the aisle, celebrating a milestone, or simply dressing for your own
+                                       sense of confidence, your look is thoughtfully finished and ready to embrace the
+                                       moment it was created for.
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="container-fluid px-3 py-3">
+                     <div class="row pt-2">
+                        <div class="col-7 col-md-3">
+                           <img src="assets/images/03-ct.png" alt="Tailored for moments" style="width:60px" />
+                        </div>
+                        <div class="col-8 col-md-6 no-mob">
+                           <div class="py-3 text-center">
+                              <a href="#cform" class="btn btn-cta">SCHEDULE AN APPOINTMENT</a>
+                           </div>
+                        </div>
+                        <div class="col-5 col-md-3">
+                           <div class="blog-btn">
+                              <ul class="slk-btns">
+                                 <li class="prevc slick-arrow" style="display: list-item;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="12" viewBox="0 0 23 12"
+                                       fill="none">
+                                       <path d="M22.3334 6.22217L0.111152 6.22217" stroke="" stroke-width="1.04167">
+                                       </path>
+                                       <path d="M0.111681 6.22228C3.17993 6.22228 5.66724 8.70958 5.66724 11.7778"
+                                          stroke-width="1.04167"></path>
+                                       <path d="M5.66737 0.666613C5.66737 3.73486 3.18007 6.22217 0.111816 6.22217"
+                                          stroke-width="1.04167"></path>
+                                    </svg>
+                                 </li>
+                                 <li class="nextc slick-arrow" style="display: list-item;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="12" viewBox="0 0 23 12"
+                                       fill="none">
+                                       <path d="M0 6.22217H22.2222" stroke="" stroke-width="1.04167"></path>
+                                       <path d="M22.2217 6.22206C19.1534 6.22206 16.6661 3.73475 16.6661 0.666504"
+                                          stroke-width="1.04167"></path>
+                                       <path d="M16.666 11.7777C16.666 8.70947 19.1533 6.22217 22.2216 6.22217"
+                                          stroke-width="1.04167"></path>
+                                    </svg>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="col-12 no-desktop">
+                           <div class="py-3 text-center">
+                              <a href="#cform" class="btn btn-cta">SCHEDULE AN APPOINTMENT</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+            </section>
+            <section class="handpicked-hkt" data-aos="fade-up">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12 col-sm-12 col-md-12 col-lg-8 ">
+                        <h2>
+                           Finest Luxury Fabrics<span class="d-block">Handpicked for You</span>
+                        </h2>
+                        <p class="pt-4 pb-4 mxw-68">
+                           We handpick the finest fabrics from world-renowned mills to ensure that you exude confidence
+                           that matches the quality of our custom-made suits and enjoy true luxury in every texture,
+                           finish, and detail.
+                        </p>
+                        <div class="row">
+                           <div class="col-12">
+                              <ul class="brand-logos">
+                                 <li><img src="assets/images/brand-m1.png" alt="Brand 1" /></li>
+                                 <li><img src="assets/images/brand-m2.png" alt="Brand 2" /></li>
+                                 <li><img src="assets/images/brand-m3.png" alt="Brand 3" /></li>
+                                 <li><img src="assets/images/brand-m4.png" alt="Brand 2" /></li>
+                                 <li><img src="assets/images/brand-m5.png" alt="Brand 3" /></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="sp-20">
+                           &nbsp;
+                        </div>
+                        <img src="assets/images/hkt-landing-sec6-2.png" alt="" />
+                     </div>
+                     <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <style>
+               .handpicked-hkt {
+                  background-image: url('assets/images/hkt-landing-sec6.png');
+               }
+
+               @media (max-width:992px) {
+                  .handpicked-hkt {
+                     background-image: none;
+                  }
+               }
+            </style>
+            <!-- 3rd Last Map Section - for DESKTOP-->
+            <section class="container my-5 desktop-map-section">
+               <!-- Left Column: Address, Contact, Hours -->
+               <div class="row align-items-center gap-0">
+                  <!-- Right Column: Map Image -->
+                  <div class="col-md-6">
+                     <div class="text-left mb-2">
+                        <h2 class="fs-1 mb-4">Visit Our <span>Atlanta <br />
+                              Showroom</span>
+                        </h2>
+                        <p>Our showroom offers a luxurious experience with convenient access from anywhere in the
+                           Atlanta
+                           metro area.
+                        </p>
+                     </div>
+                     <div class="contact-details">
+                        <!-- Address Section -->
+                        <div class="contact-item">
+                           <div class="icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"
+                                 fill="none">
+                                 <circle cx="17.2397" cy="17.2397" r="17.2397" fill="#A42126" />
+                                 <path
+                                    d="M23.5292 15.395C23.5292 11.9039 20.699 9.07373 17.2079 9.07373C13.7169 9.07373 10.8867 11.9039 10.8867 15.395C10.8867 19.9922 17.2079 26.3134 17.2079 26.3134C17.2079 26.3134 23.5292 19.9922 23.5292 15.395Z"
+                                    stroke="white" stroke-width="1.14931" stroke-miterlimit="10"
+                                    stroke-linejoin="round" />
+                                 <path
+                                    d="M17.2088 17.693C18.4783 17.693 19.5074 16.6638 19.5074 15.3943C19.5074 14.1248 18.4783 13.0957 17.2088 13.0957C15.9393 13.0957 14.9102 14.1248 14.9102 15.3943C14.9102 16.6638 15.9393 17.693 17.2088 17.693Z"
+                                    stroke="white" stroke-width="1.14931" stroke-miterlimit="10"
+                                    stroke-linejoin="round" />
+                              </svg>
+                           </div>
+                           <div>
+                              <h5>OUR ATLANTA ADDRESS</h5>
+                              <p>5378 Buford Hwy NE, Atlanta, GA 30340</p>
+                           </div>
+                        </div>
+                        <!-- Contact Section -->
+                        <div class="contact-item">
+                           <div class="icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"
+                                 fill="none">
+                                 <circle cx="17.2397" cy="17.7578" r="17.2397" fill="#A42126" />
+                                 <path
+                                    d="M15.4743 19.4009C15.4743 19.4009 17.5431 21.4402 18.3855 21.6027L20.1144 19.8738C20.1144 19.8738 20.7942 19.2235 21.5183 19.8885L24.3408 22.711C24.3408 22.711 24.7989 23.5534 24.2669 24.0706L22.8926 25.4449C22.8926 25.4449 20.4691 26.9965 16.5826 24.5139C16.5826 24.5139 14.7502 23.5534 13.0508 21.8244"
+                                    stroke="white" stroke-width="0.886651" stroke-miterlimit="10" />
+                                 <path
+                                    d="M15.6242 19.5489C15.6242 19.5489 13.5849 17.48 13.4075 16.6377L15.1365 14.9087C15.1365 14.9087 15.7867 14.229 15.1217 13.5049L12.2844 10.6824C12.2844 10.6824 11.4421 10.2243 10.9249 10.7563L9.5506 12.1306C9.5506 12.1306 7.99896 14.5541 10.4964 18.4406C10.4964 18.4406 11.4569 20.273 13.2006 21.9724"
+                                    stroke="white" stroke-width="0.886651" stroke-miterlimit="10" />
+                              </svg>
+                           </div>
+                           <div>
+                              <h5>CONTACT US</h5>
+                              <p>Phone: <a href="tel:+17703456868">+1 770-458-8682</a></p>
+                           </div>
+                        </div>
+                        <!-- Hours Section -->
+                        <div class="contact-item">
+                           <div class="icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="36" viewBox="0 0 35 36"
+                                 fill="none">
+                                 <circle cx="17.2397" cy="18.1093" r="17.2397" fill="#A42126" />
+                                 <path
+                                    d="M17.9158 18.3218V14.2159C17.9158 13.9245 17.6793 13.688 17.3879 13.688C17.0965 13.688 16.8599 13.9245 16.8599 14.2159V18.3218C16.596 18.5047 16.332 18.8415 16.332 19.2311C16.332 19.8142 16.8048 20.2869 17.3879 20.2869C17.9709 20.2869 18.4437 19.8142 18.4437 19.2311C18.4437 18.8412 18.1797 18.5047 17.9158 18.3218Z"
+                                    fill="white" />
+                                 <path
+                                    d="M16.9929 11.3125C12.6266 11.3125 9.07422 14.8648 9.07422 19.2312C9.07422 23.5976 12.6266 27.1499 16.9929 27.1499C21.3593 27.1499 24.9117 23.5976 24.9117 19.2312C24.9117 14.8648 21.3593 11.3125 16.9929 11.3125ZM16.9929 26.622C12.9177 26.622 9.60213 23.3065 9.60213 19.2312C9.60213 15.156 12.9177 11.8404 16.9929 11.8404C21.0682 11.8404 24.3837 15.156 24.3837 19.2312C24.3837 23.3065 21.0682 26.622 16.9929 26.622Z"
+                                    fill="white" />
+                              </svg>
+                           </div>
+                           <div>
+                              <h5>HOURS</h5>
+                              <p>Monday - Friday: 10:00 AM - 6:00 PM</p>
+                              <p>Saturday: 10:00 AM - 5:00 PM</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="map-container1"><img src="assets/images/map.png" alt="Map" /></div>
+                  </div>
+               </div>
+            </section>
+            <!-- 3rd Last Map Section - for MOBILE-->
+            <section class="container my-5 mobile-map-section">
+               <!-- Left Column: Address, Contact, Hours -->
+               <div class="row align-items-center gap-0">
+                  <!-- Right Column: Map Image -->
+                  <div class="col-md-6">
+                     <div class="text-center mb-2">
+                        <h2 class="fs-1 mb-4">Visit Our <span>Atlanta <br />
+                              Showroom</span>
+                        </h2>
+                        <p>Our showroom offers a luxurious experience with convenient access from anywhere in the
+                           Atlanta
+                           metro area.
+                        </p>
+                        <div class="map-container1"><img src="assets/images/map.png" alt="Map" /></div>
+                     </div>
+                     <div class="contact-details">
+                        <!-- Address Section -->
+                        <div class="contact-item">
+                           <div class="icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"
+                                 fill="none">
+                                 <circle cx="17.2397" cy="17.2397" r="17.2397" fill="#A42126" />
+                                 <path
+                                    d="M23.5292 15.395C23.5292 11.9039 20.699 9.07373 17.2079 9.07373C13.7169 9.07373 10.8867 11.9039 10.8867 15.395C10.8867 19.9922 17.2079 26.3134 17.2079 26.3134C17.2079 26.3134 23.5292 19.9922 23.5292 15.395Z"
+                                    stroke="white" stroke-width="1.14931" stroke-miterlimit="10"
+                                    stroke-linejoin="round" />
+                                 <path
+                                    d="M17.2088 17.693C18.4783 17.693 19.5074 16.6638 19.5074 15.3943C19.5074 14.1248 18.4783 13.0957 17.2088 13.0957C15.9393 13.0957 14.9102 14.1248 14.9102 15.3943C14.9102 16.6638 15.9393 17.693 17.2088 17.693Z"
+                                    stroke="white" stroke-width="1.14931" stroke-miterlimit="10"
+                                    stroke-linejoin="round" />
+                              </svg>
+                           </div>
+                           <div>
+                              <h5>OUR ATLANTA ADDRESS</h5>
+                              <p>5378 Buford Hwy NE, Atlanta, GA 30340</p>
+                           </div>
+                        </div>
+                        <!-- Contact Section -->
+                        <div class="contact-item">
+                           <div class="icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"
+                                 fill="none">
+                                 <circle cx="17.2397" cy="17.7578" r="17.2397" fill="#A42126" />
+                                 <path
+                                    d="M15.4743 19.4009C15.4743 19.4009 17.5431 21.4402 18.3855 21.6027L20.1144 19.8738C20.1144 19.8738 20.7942 19.2235 21.5183 19.8885L24.3408 22.711C24.3408 22.711 24.7989 23.5534 24.2669 24.0706L22.8926 25.4449C22.8926 25.4449 20.4691 26.9965 16.5826 24.5139C16.5826 24.5139 14.7502 23.5534 13.0508 21.8244"
+                                    stroke="white" stroke-width="0.886651" stroke-miterlimit="10" />
+                                 <path
+                                    d="M15.6242 19.5489C15.6242 19.5489 13.5849 17.48 13.4075 16.6377L15.1365 14.9087C15.1365 14.9087 15.7867 14.229 15.1217 13.5049L12.2844 10.6824C12.2844 10.6824 11.4421 10.2243 10.9249 10.7563L9.5506 12.1306C9.5506 12.1306 7.99896 14.5541 10.4964 18.4406C10.4964 18.4406 11.4569 20.273 13.2006 21.9724"
+                                    stroke="white" stroke-width="0.886651" stroke-miterlimit="10" />
+                              </svg>
+                           </div>
+                           <div>
+                              <h5>CONTACT US</h5>
+                              <p>Phone: <a href="tel:+17703456868">+1 770-458-8682</a></p>
+                           </div>
+                        </div>
+                        <!-- Hours Section -->
+                        <div class="contact-item">
+                           <div class="icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="36" viewBox="0 0 35 36"
+                                 fill="none">
+                                 <circle cx="17.2397" cy="18.1093" r="17.2397" fill="#A42126" />
+                                 <path
+                                    d="M17.9158 18.3218V14.2159C17.9158 13.9245 17.6793 13.688 17.3879 13.688C17.0965 13.688 16.8599 13.9245 16.8599 14.2159V18.3218C16.596 18.5047 16.332 18.8415 16.332 19.2311C16.332 19.8142 16.8048 20.2869 17.3879 20.2869C17.9709 20.2869 18.4437 19.8142 18.4437 19.2311C18.4437 18.8412 18.1797 18.5047 17.9158 18.3218Z"
+                                    fill="white" />
+                                 <path
+                                    d="M16.9929 11.3125C12.6266 11.3125 9.07422 14.8648 9.07422 19.2312C9.07422 23.5976 12.6266 27.1499 16.9929 27.1499C21.3593 27.1499 24.9117 23.5976 24.9117 19.2312C24.9117 14.8648 21.3593 11.3125 16.9929 11.3125ZM16.9929 26.622C12.9177 26.622 9.60213 23.3065 9.60213 19.2312C9.60213 15.156 12.9177 11.8404 16.9929 11.8404C21.0682 11.8404 24.3837 15.156 24.3837 19.2312C24.3837 23.3065 21.0682 26.622 16.9929 26.622Z"
+                                    fill="white" />
+                              </svg>
+                           </div>
+                           <div>
+                              <h5>HOURS</h5>
+                              <p>Monday - Friday: 10:00 AM - 6:00 PM</p>
+                              <p>Saturday: 10:00 AM - 5:00 PM</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                  </div>
+               </div>
+            </section>
+            <section class="promo-banner">
+               <div class="container-fluid p-0">
+                  <div class="banner-content">
+                     <div class="row align-items-center justify-content-end g-0">
+                        <div class="col-12 col-lg-5 col-md-4">
+                           <div class="banner-text">
+                              <h2 class="offer-title">New Client Offer</h2>
+                              <p class="offer-description">Begin your Custom journey with us, enjoy a complimentary
+                                 custom
+                                 shirt with your first suit purchase <small>Custom Shirt valued up to
+                                    $295</small>
+                              </p>
+                           </div>
+                        </div>
+                        <div class="col-12 col-lg-3 col-md-3">
+                           <div class="banner-cta">
+                              <a href="#cform" class="btn btn-cta">Schedule an appointment</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- Main Appointment Section -->
+            <section class="appointment-section">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12">
+                        <h2 class="appointment-heading text-center">
+                           SCHEDULE A <span>CONSULTATION</span>
+                        </h2>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- contact form -->
+            <section class="contact-section overflow-hidden">
+               <div class="">
+                  <div class="row justify-content-center">
+                     <div class="col-lg-8 col-md-10">
+                        <div class="contact-form-wrapper">
+                           <form id="contactForm" class="contact-form">
+                              <div class="row mb-3">
+                                 <div class="col-md-6 mb-3 mb-md-0">
+                                    <label class="from-label" for="firstName">First Name</label>
+                                    <input type="text" class="form-control form-input"
+                                       placeholder="Please enter your First Name" name="firstName" required>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <label class="from-label" for="lastName">Last Name</label>
+                                    <input type="text" name="lastName" class="form-control form-input"
+                                       placeholder="Please enter your Last Name" required>
+                                 </div>
+                              </div>
+
+                              <div class="row mb-3">
+                                 <div class="col-md-6 mb-3 mb-md-0">
+                                    <label class="from-label" for="phoneNumber">Phone Number</label>
+                                    <input type="tel" name="phone" class="form-control form-input"
+                                       placeholder="Please enter your Phone Number" required>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <label class="from-label" for="email">Email Address</label>
+                                    <input type="email" name="email" class="form-control form-input"
+                                       placeholder=" Please enter your Email Address" required>
+                                 </div>
+                              </div>
+
+                              <div class="mb-3">
+                                 <label class="from-label" for="company">I’m Interrested in*</label>
+                                 <select name="occasion" required
+                                    style="padding: 10px; margin-bottom: 15px; border: 1px solid maroon; border-radius: 5px; width: 100%; margin-top: 5px;">
+                                    <option value="">Please select one</option>
+                                    <option value="Wedding (Groom)">Wedding (Groom)</option>
+                                    <option value="Wedding (Guest)">Wedding (Guest)</option>
+                                    <option value="Special Occasion">Special Occasion</option>
+                                    <option value="Business Attire">Business Attire</option>
+                                    <option value="Travel Attire">Travel Attire</option>
+                                    <option value="Other">Other</option>
+                                 </select>
+                              </div>
+                              <div class="mb-4">
+                                 <label class="from-label" for="service">Additional Informaation (optional)</label>
+                                 <textarea name="message" class="form-control form-textarea" rows="5"
+                                    placeholder="Please write your message here."></textarea>
+                              </div>
+                              <input type="hidden" name="ip" id="ip" />
+                              <input type="hidden" name="location" id="location" />
+                              <input type="hidden" name="device" id="device" />
+                              <div class="text-center mb-3">
+                                 <button id="recaptcha_652d38524e69969434716f7f962360d2" type="submit"
+                                    class="btn btn-submit">Book My Consultation <img class="arrow"
+                                       src="assets/images/btn-submit-arrow.png" alt="">
+                                 </button>
+                              </div>
+
+                              <p class="disclaimer-text text-center">
+                                 By submitting this form, you agree to be contacted regarding your consultation <br>
+                                 request.
+                                 We respect your privacy and will never share your information.
+                              </p>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <script>
+               async function getIP() {
+                  const res = await fetch("https://api.ipify.org?format=json");
+                  const data = await res.json();
+                  document.getElementById("ip").value = data.ip;
+                  return data.ip;
+               }
+
+               async function getGeo(ip) {
+                  const res = await fetch(`https://ipapi.co/${ip}/json/`);
+                  const data = await res.json();
+                  document.getElementById("location").value = `${data.city}, ${data.region}, ${data.country_name}`;
+               }
+
+               document.addEventListener("DOMContentLoaded", async () => {
+                  const ip = await getIP();
+                  await getGeo(ip);
+                  document.getElementById("device").value = navigator.userAgent;
+               });
+
+               document.getElementById("contactForm").addEventListener("submit", async function (e) {
+                  e.preventDefault();
+                  const formData = new FormData(this);
+                  const data = Object.fromEntries(formData.entries());
+
+                  const res = await fetch("https://blog.xntric.me/send-email", {
+                     method: "POST",
+                     headers: { "Content-Type": "application/json" },
+                     body: JSON.stringify(data)
+                  });
+
+                  const msg = await res.text();
+                  window.location.href = "/hkt-thank-you.html"
+               });
+               </script>
+            </section>
+            <!-- footer -->
+            <footer class="hkt-footer">
+               <div class="container px-4">
+                  <!-- Main footer content -->
+                  <div class="row align-items-center py-4">
+                     <!-- Logo -->
+                     <div class="col-2 col-md-3 text-center">
+                        <a class="footer-logo" href="/"><img src="assets/images/footer-logo.png" alt="Logo"
+                              class="footer-logo" /></a>
+                     </div>
+                     <!-- Description text -->
+                     <div class="col-10 col-md-6 mb-3 mb-md-0">
+                        <div class="footer-links">
+                           <a href="#" class="text-light">Terms & Conditions</a>
+                           <a href="#" class="text-light">Privacy Policy</a>
+                        </div>
+                     </div>
+                     <!-- Our Locations -->
+                     <div class="col-12  col-md-3 text-md-end text-center">
+                        <p>© 2025 Copyright HKT Clothiers</p>
+                     </div>
+                  </div>
+               </div>
+            </footer>
+            <!-- Bootstrap core JavaScript
+         ================================================== -->
+            <!-- Placed at the end of the document so the pages load faster -->
+            <!-- Optional JavaScript; choose one of the two! -->
+            <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+            <script src="assets/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+            <script src="assets/js/myscripts.js" type="text/javascript" charset="utf-8"></script>
+            <!-- Option 1: Bootstrap Bundle with Popper -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+               integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+               crossorigin="anonymous"></script>
+            <script src="https://kit.fontawesome.com/3af86d12b8.js" crossorigin="anonymous"></script>
+            <!-- Option 2: Separate Popper and Bootstrap JS -->
+            <!--
+         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+         -->
+            <script>
+                  $(document).ready(function () {
+                     // Initialize the carousel with 4 items visible at a time
+                     $(".services-carousel").slick({
+                        infinite: true,
+                        slidesToShow: 3, // Show 4 slides at once
+                        slidesToScroll: 1,
+                        arrows: true,
+                        dots: true,  // Add dots for navigation
+                        autoplay: true,
+                        autoplaySpeed: 3000,
+                        prevArrow: '<button class="slick-prev">Previous</button>',
+                        nextArrow: '<button class="slick-next">Next</button>',
+                        responsive: [
+                           {
+                              breakpoint: 1024,
+                              settings: {
+                                 slidesToShow: 3,  // Show 3 slides on medium screens
+                                 slidesToScroll: 1,
+                              }
+                           },
+                           {
+                              breakpoint: 768,
+                              settings: {
+                                 slidesToShow: 2,  // Show 2 slides on smaller screens
+                                 slidesToScroll: 1,
+                              }
+                           },
+                           {
+                              breakpoint: 480,
+                              settings: {
+                                 slidesToShow: 1,  // Show 1 slide on very small screens
+                                 slidesToScroll: 1,
+                              }
+                           }
+                        ]
+                     });
+
+                     // Initialize AOS after carousel is initialized
+                     AOS.init();
+                  });
+            </script>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+
+</html>

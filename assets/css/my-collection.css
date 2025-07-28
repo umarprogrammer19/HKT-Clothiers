@@ -1,0 +1,81 @@
+.collections-page-template {
+  background: #fff;
+}
+.collections-page-template h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.collections-page-template p {
+  font-size: 1rem;
+  color: #666;
+}
+.collections-page-template h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.collections-page-template img {
+  max-height: 300px;
+  object-fit: cover;
+  width: 100%;
+}
+.collections-page-template a {
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.collections-page-template a:hover {
+  color: #000;
+}
+
+.finest-txt.col-sec {
+  position: absolute;
+  bottom: 0px;
+}
+.finest-txt.col-sec p {
+  padding: 15px 0px;
+}
+/*
+.finest-txt.col-sec a {
+  position: unset;
+}
+*/
+.discover-img img {
+  height: 600px;
+  object-fit: cover;
+}
+
+.finest-txt.col-sec.signature {
+  position: unset;
+  bottom: 0px;
+  top: 0px;
+  margin: auto;
+}
+
+.signature-sec {
+  min-height: 80dvh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.lorem-ips {
+  padding-top: 80px;
+}
+
+.similiar-collection .finest-txt {
+  min-height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.similiar-collection .col-md-12 {
+  margin: 15px 0px 0px 0px;
+}
+
+/****** ABOUT PAGE ************/
+.neil-balani-story {
+  background: #000;
+  padding: 80px 0 120px;
+  height: 800px;
+}

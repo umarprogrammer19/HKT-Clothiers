@@ -1,0 +1,240 @@
+.book-form-sec {
+    padding: 100px 0;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.form-container {
+    max-width: 600px;
+    width: 100%;
+}
+
+.step-indicator {
+    position: relative;
+}
+
+.step-text {
+    color: #A42126;
+    font-family: Urbanist;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 55px;
+}
+
+.main-heading {
+    color: #000;
+    font-family: "Canela Trial";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 55px;
+    /* 114.583% */
+    text-transform: uppercase;
+}
+
+.main-heading-2 {
+    color: #A42126;
+    font-family: "Canela Trial";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 55px;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color: #000;
+    font-family: Urbanist;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    /* 123.077% */
+}
+
+.form-input {
+    width: 470px;
+    height: 55px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #A6A6A6;
+    background: #FFF;
+    padding: 10px;
+}
+
+.form-input::placeholder {
+    color: #000;
+    font-family: Urbanist;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.btn-custom {
+    width: 470px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #A42126;
+    color: #FFF;
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 18.889px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+
+.image-container {
+    width: 610px;
+    height: 700px;
+    overflow: hidden;
+}
+
+.object-cover {
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .image-container {
+        height: 50vh;
+        min-height: 400px;
+    }
+
+    .main-heading {
+        font-size: 2rem;
+    }
+
+    .form-container {
+        padding: 3rem 2rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-heading {
+        font-size: 1.75rem;
+    }
+
+    .form-container {
+        padding: 2rem 1.5rem !important;
+    }
+}
+
+.main-section {
+    background-color: #EDEDED;
+    padding: 50px 0;
+}
+
+.journal-title {
+    color: #000;
+    font-family: "Canela Trial";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.journal-span {
+    color: #A42126;
+    font-family: "Canela Trial";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.journal-subtitle {
+    color: #505050;
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px;
+    /* 166.667% */
+}
+
+.card {
+    background-color: white;
+    transition: transform 0.3s ease;
+
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+.img-section {
+    min-height: 305px;
+    max-height: 305px;
+}
+
+.card-img-container {
+    overflow: hidden;
+}
+
+.card-img-top {
+    width: 100%;
+}
+
+.card-title {
+    color: #000;
+    font-family: Urbanist;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.date {
+    color: #A42126;
+    font-family: Urbanist;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .journal-title {
+        font-size: 2rem;
+    }
+
+    .journal-subtitle {
+        font-size: 0.9rem;
+    }
+}
+
+
+.section-title {
+    color: #000;
+    text-align: center;
+    font-family: "Canela Trial";
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.45px;
+    text-transform: uppercase;
+}
+
+.content-text {
+    color: #000;
+    font-family: Urbanist;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px;
+    /* 125% */
+    letter-spacing: 0.24px;
+}

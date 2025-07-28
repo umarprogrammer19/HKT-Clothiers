@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/*
+// <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name
+
+.urbanist-<uniquifier> {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+*/
+
+
+@font-face {
+    font-family: 'Canela-Regular';
+    src: url('../fonts/Canela-Regular-Trial.otf');
+    src: url('../fonts/Canela-Regular-Trial.woff') format('woff'), url('../fonts/Canela-Regular-Trial.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Canela-Light';
+    src: url('../fonts/Canela-Light-Trial.otf');
+    src: url('../fonts/Canela-Light-Trial.woff') format('woff'), url('../fonts/Canela-Light-Trial.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+

@@ -1,0 +1,1181 @@
+.landing-heading-white {
+    font-size: 80px;
+    line-height: 80px;
+}
+
+.landing-heading {
+    color: #A42126;
+    font-size: 80px;
+    line-height: 80px;
+}
+
+.landing-para {
+    max-width: 45%;
+    margin: 0 auto;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.slide-box video {
+    width: 400px;
+    height: 550px;
+    object-fit: cover;
+}
+
+.handpicked-hkt {
+    padding: 0px 0px;
+    margin: 80px auto;
+    background-image: url(../images//hkt-landing-sec6.jpg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 34%;
+
+}
+
+.promo-banner {
+    position: relative;
+    max-width: 92%;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+
+/**Brand Logos*/
+.brand-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0px;
+    padding: 0px 0;
+    margin: 0 0px 0px -12px;
+}
+
+.brand-logos li  {
+    border-right: 1px solid #00000020;
+    padding:0px 10px;
+}
+
+.brand-logos li:last-child {
+    border-right: none;
+}
+
+/***/
+.banner-content {
+
+    background-image: url('../images/hkt-form-banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 100px;
+    margin: 0px 20px;
+}
+
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: white;
+}
+
+.offer-title {
+       color: #FFF;
+    font-size: 38px;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.offer-description {
+    color: #FFF;
+    font-family: Urbanist;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3em;
+}
+.offer-description small {
+    display: block;
+    font-size: 16px;
+    padding-top: 6px;
+}
+
+.offer-urgency {
+    color: #FFF;
+    font-family: Urbanist;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px;
+}
+
+.banner-cta {
+    text-align: center;
+}
+
+.banner-cta .btn-appointment {
+    color: #FFF;
+    font-family: Urbanist;
+    font-size: 18px;
+    background: transparent;
+    border: #FFFFFF 1px solid;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+
+
+/* Main Appointment Section */
+.appointment-section {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.appointment-heading {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #333;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.appointment-heading .highlight {
+    color: #c41e3a;
+    font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .banner-text {
+        padding: 30px 20px;
+    }
+
+    .offer-title {
+        font-size: 20px;
+    }
+
+    .offer-description {
+        font-size: 15px;
+    }
+
+    .banner-cta {
+        padding: 30px 15px;
+    }
+
+    .btn-appointment {
+        min-width: 180px;
+        padding: 12px 20px;
+        font-size: 11px;
+    }
+
+    .appointment-heading {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-content {
+        min-height: auto;
+    }
+
+    .banner-image {
+        height: 150px;
+    }
+
+    .banner-text {
+        padding: 25px 15px;
+        text-align: center;
+    }
+
+    .offer-title {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .offer-description {
+        font-size: 18px;
+    }
+
+    .offer-urgency {
+        font-size: 13px;
+    }
+
+    .banner-cta {
+        padding: 10px;
+    }
+
+    .btn-appointment {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .appointment-heading {
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 576px) {
+    h2 {
+        font-size: 20px !important;
+    }
+    .appointment-section {
+        padding: 40px 0;
+    }
+
+    .appointment-heading {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+
+    .offer-title {
+        font-size: 26px;
+    }
+
+    .banner-text {
+        padding: 20px 15px;
+    }
+}
+
+/* Additional styling for better visual hierarchy */
+.promo-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(44, 44, 44, 0.1) 0%, rgba(44, 44, 44, 0.3) 100%);
+    pointer-events: none;
+}
+
+/* Contact Form Styles */
+.contact-section {
+    background-image: url('../images/hkt-form.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 60px 0;
+}
+
+.contact-form-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 48.688px 97.201px 50.883px 97.375px;
+    border-radius: 19.475px;
+    border: 0.534px solid #FFF;
+    background: rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(12.171916007995605px);
+}
+
+.form-title {
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.form-input,
+.form-textarea {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 12px 15px;
+    font-size: 14px;
+    color: #333;
+    border-radius: 7.615px;
+    border: 0.952px solid #FFF;
+    background: #FFF;
+    margin-bottom: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.from-label {
+    color: #FFF;
+    font-family: Urbanist;
+    font-size: 21.42px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26.653px;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: #666;
+    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25);
+    outline: none;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #999;
+    font-size: 14px;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-submit {
+        border-radius: 50px;
+    border: 1px solid #FFF;
+    background: #FFF;
+    backdrop-filter: blur(16.0269718170166px);
+    padding: 5px 5px 5px 40px;
+    font-size: 20px;
+}
+
+.btn-submit:hover {
+    background-color: #a42126;
+    color: white;
+}
+
+.disclaimer-text {
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 23.37px;
+    .disclaimer-text
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 40px 0;
+    }
+
+    .contact-form-wrapper {
+        width: 95%;
+        margin: 0 auto;
+        padding: 30px 20px;
+    }
+
+    .form-title {
+        font-size: 24px;
+    }
+
+    .btn-submit {
+            padding: 7px 7px 7px 30px;
+    font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-form-wrapper {
+        padding: 20px 15px;
+    }
+
+    .disclaimer-text {
+        font-size: 14px;
+    }
+}
+
+.form-control:focus {
+    border-color: #666;
+    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25);
+}
+
+
+.hkt-footer {
+    background-color: #000;
+    color: #ffffff;
+    padding: 0px 20px;
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+}
+
+.footer-description {
+    color: #FFF;
+    font-family: Urbanist;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 40px;
+}
+
+.footer-locations {
+    font-size: 0.9rem;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.location-icon {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer-link {
+    color: #FFF;
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 21.333px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26.667px;
+    /* 125% */
+}
+
+.footer-link:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-copyright {
+    color: #FFF;
+    font-family: Urbanist;
+    font-size: 21.333px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26.667px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.social-icon {
+    padding: 10px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #f0f0f0;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+.hkt-footer p {
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-description {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .location-icon {
+        margin-left: auto;
+    }
+
+    .handpicked-hkt {
+        background: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-logo {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .footer-description {
+        font-size: 15px;
+        padding: 0 1rem;
+        line-height: 1.7em;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
+/* Border styling */
+.border-secondary {
+    border-color: #404040 !important;
+}
+
+
+.tailoring-services {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+/* Header Styles */
+.services-header {
+    margin-bottom: 60px;
+}
+
+.services-title {
+    color: #FFF;
+    font-family: "Canela Trial";
+    font-size: 28.805px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26.884px;
+    /* 93.333% */
+}
+
+.services-title .highlight {
+    color: #c41e3a;
+    font-weight: 400;
+}
+
+.services-description {
+    color: #FFF;
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 17.283px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 23.044px;
+    /* 133.333% */
+}
+
+/* Services Grid */
+.services-grid {
+    margin-top: 50px;
+}
+
+/* Service Card Styles */
+.service-card {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 470px;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.05);
+}
+
+/* Service Overlay */
+.service-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 40px 20px 25px;
+    color: white;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.service-content {
+    text-align: center;
+}
+
+.service-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.service-text {
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Hover Effects */
+.service-card:hover .service-overlay {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .services-title {
+        font-size: 36px;
+    }
+
+    .services-description {
+        font-size: 15px;
+        padding: 0 20px;
+    }
+
+    .service-card {
+        height: 350px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .post-carousel {
+        padding-left: 20px;
+    }
+
+    .slide-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .slide-content img {
+        width: 300px;
+        height: 400px;
+    }
+
+    .at-hkt-clt .text-left {
+        padding-top: 20px;
+    }
+
+    header .btn.btn-cta,
+    .btn.btn-cta {
+        padding: 15px 20px;
+        background: transparent;
+        border: 1px solid #FFF;
+        color: #fff;
+        font-size: 14px;
+        width: fit-content;
+        text-transform: uppercase;
+        border-radius: 0;
+        font-weight: 500;
+        margin: 0;
+        font-family: var(--text-font-family);
+        transition: all 0.2s;
+        margin-top: 20px;
+    }
+
+    .landing-para {
+        max-width: 100%;
+    }
+
+    .tailoring-services {
+        padding: 60px 0;
+    }
+
+    .services-header {
+        margin-bottom: 40px;
+    }
+
+    .services-title {
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+
+    .services-description {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .service-card {
+        height: 300px;
+    }
+
+    .service-title {
+        font-size: 20px;
+    }
+
+    .service-text {
+        font-size: 12px;
+    }
+
+    .service-overlay {
+        padding: 30px 15px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    header .btn.btn-cta, .btn.btn-cta {
+        padding: 15px 10px;
+        font-size: 13px;
+    }
+    .footer-logo {
+        width: 60px;
+    }
+    .services-title {
+        font-size: 24px;
+    }
+
+    .services-description {
+        font-size: 13px;
+        padding: 0 15px;
+    }
+
+    .service-card {
+        height: 280px;
+        margin-bottom: 20px;
+    }
+
+    .service-title {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .service-text {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+}
+
+/* Additional Visual Enhancements */
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(196, 30, 58, 0.1) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-overlay {
+    z-index: 2;
+}
+
+.arrow {
+    padding: 0;
+    background: #000;
+        width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+.section-headind-red {
+    color: #A42126;
+    font-family: "Canela Trial";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.section-heading {
+    font-family: 'Times New Roman', serif;
+    font-size: 32px;
+    color: #A42126;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    width: 100%;
+    height: 430px;
+    background-image: url('../images/map.png');
+    /* Replace with the correct path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact-details {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.contact-details p {
+    margin-bottom: 0.5rem;
+}
+
+.contact-details h5 {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #A42126;
+}
+
+.contact-details a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    color: #A42126;
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: start;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    margin-bottom: -5px !important;
+}
+
+.contact-item .icon {
+        transform: translate(0px, 10px);
+}
+
+.slick-prev,
+.slick-next {
+    z-index: 1;
+    background-color: #A42126;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.slick-prev {
+    left: -40px;
+}
+
+.slick-next {
+    right: -40px;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    background-color: #c8222b;
+}
+
+.slick-dots {
+    bottom: -30px;
+}
+
+.slick-dots li button:before {
+    font-size: 10px;
+    color: #A42126;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #A42126;
+}
+
+.slick-slide {
+    padding: 15px;
+}
+
+/* Refined spacing and alignment for the service card images */
+.service-card {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /* Adjust width to ensure cards fit nicely */
+    height: 100%;
+    margin-bottom: 20px;
+    /* Add space between rows */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.service-content-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    /* Dark background for text visibility */
+    color: white;
+    padding: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.service-card:hover .service-overlay {
+    opacity: 1;
+}
+
+.service-content {
+    text-align: center;
+    color: white;
+}
+
+
+.service-title {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.service-text {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Container and alignment tweaks */
+.services-carousel {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    /* Adjust the gap between cards */
+}
+
+.services-carousel .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+/* Adding some refinement to the "Perfect Fit" title */
+.section-heading span {
+    color: #c8222b;
+    font-weight: bold;
+}
+
+/* Refine the margin and padding of the text */
+.pt-4,
+.pb-4 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 26px;
+    margin-top: 10px;
+    font-weight: normal !important;
+}
+
+/* CSS for styling the counter and arrows */
+.slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    transform: translate(0px, -40px);
+}
+
+.slide-counter {
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    margin: 0 15px;
+}
+
+.counter-prev,
+.counter-next {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.counter-prev:hover,
+.counter-next:hover {
+    color: #007bff;
+}
+
+.counter-prev span,
+.counter-next span {
+    display: inline-block;
+}
+
+.contact-section {
+    background-image: url('../images/hkt-form.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 60px 0;
+}
+
+.contact-form-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 48.688px 97.201px 50.883px 97.375px;
+    border-radius: 19.475px;
+    border: 0.534px solid #FFF;
+    background: rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(12.171916007995605px);
+}
+
+.form-title {
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.form-input,
+.form-textarea {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 12px 15px;
+    font-size: 14px;
+    color: #333;
+    border-radius: 7.615px;
+    border: 0.952px solid #FFF;
+    background: #FFF;
+    margin-bottom: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.from-label {
+    color: #FFF;
+    font-family: Urbanist;
+    font-size: 21.42px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26.653px;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: #666;
+    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25);
+    outline: none;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #999;
+    font-size: 14px;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-submit {
+    border-radius: 12434.335px;
+    border: 0.534px solid #FFF;
+    background: #FFF;
+    backdrop-filter: blur(16.0269718170166px);
+    padding: 4.975px 6.413px 4.682px 27.512px;
+}
+
+.btn-submit:hover {
+    background-color: #222;
+    color: white;
+}
+
+.disclaimer-text {
+    color: #FFF;
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 17.528px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23.37px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 40px 0;
+    }
+
+    .contact-form-wrapper {
+        width: 95%;
+        margin: 0 auto;
+        padding: 30px 20px;
+    }
+
+    .form-title {
+        font-size: 24px;
+    }
+
+    .btn-submit {
+        min-width: 200px;
+        padding: 10px 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-form-wrapper {
+        padding: 20px 15px;
+    }
+
+    .disclaimer-text {
+        font-size: 10px;
+    }
+}
+
+.form-control:focus {
+    border-color: #666;
+    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25);
+}
